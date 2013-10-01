@@ -1,6 +1,9 @@
 Takemyphone::Application.routes.draw do
   root to: 'index_pages#home'
-   
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self) 
+  
   match '/about', to: 'index_pages#about'
   match '/how_we_work', to: 'index_pages#how_we_work'
   match '/contact_us', to: 'index_pages#contact_us'
