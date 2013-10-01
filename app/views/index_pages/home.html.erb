@@ -1,0 +1,67 @@
+<% provide(:title, 'Home') %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#myCarousel').carousel({
+  interval: 10000
+  })
+});
+</script>
+
+<div class="container-fluid">
+    <div class="span2" style="background-color:#ffad00">
+      <h3>Sell your smartphone online</h3>
+      <p>This will be a nice place. Put some text over here, we will manage with this sample text for now, but think of something meanwhile</p><br/>
+      <p>To see how it works, <a href="#" style="color:black"><u>Click Here</u></a></p>
+
+    </div>
+    
+    
+    <!-- test carousel -->
+    <div id="myCarousel" class="span10 carousel slide">
+      <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+ 
+
+<!-- Carousel items -->
+<div class="carousel-inner">
+  
+<div class="item active">
+  <a href="#"><img src="http://placehold.it/1200x420" alt="Image" /></a>
+</div><!--/item-->
+ 
+<div class="item">
+  <a href="#"><img src="http://placehold.it/1200x420" alt="Image"  /></a>
+</div><!--/item-->
+ 
+<div class="item">
+  <a href="#"><img src="http://placehold.it/1200x420" alt="Image"  /></a>
+</div><!--/item-->
+ 
+</div><!--/carousel-inner-->
+ 
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!--/myCarousel-->
+   
+  </div>
+
+
+<!-- choose your phone -->
+<div class="container-fluid">
+<div class="span12 text-center">
+  <h3>CHOOSE YOUR PHONE</h3>
+  <p>
+<a href="#"><%= image_tag "apple_logo.png" %></a>
+<a href="#"><%= image_tag "nokia_logo.png" %></a>
+<a href="#"><%= image_tag "htc_logo.png" %></a>
+<a href="#"><%= image_tag "samsung_logo.png" %></a>
+<a href="#"><%= image_tag "blackberry_logo.png" %></a>
+  </p><br/>
+
+    
+</div>
+</div>
