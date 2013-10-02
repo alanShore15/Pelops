@@ -1,0 +1,36 @@
+<!-- needs to be edited -->
+<% provide(:title, 'Sell Samsung Phones') %>
+
+
+<!-- title bar -->
+<div class="container-fluid">
+  <div class="row-fluid" style="background-color:#ffad00">
+ 	<div class="span8">
+ 		
+ 		<h5>CHOOSE YOUR PHONE <i class="icon-play icon-black"></i>  <%= 'SAMSUNG' %></h5>
+ 	</div> 
+  </div>
+ <div>
+<!-- phone list -->
+<div class="container-fluid">
+<div class="span12">
+	<br/>
+	
+<ul class="thumbnails">
+
+<% @phone.each do |phone| %>
+	<li class="span2">
+	<div class="thumbnail">
+    <%= image_tag 'galaxy-star.jpeg' %>
+    <div class="caption text-center">
+    <h4><%= "Samsung "+ phone.name %></h4>
+    <p align="center"><a href="#" class="btn btn-inverse btn-block" style="text-decoration: none; color: white">Sell Now</a></p>
+    </div>
+    </div>
+    </li>
+<% end %>
+
+</ul>
+
+</div>
+</div>

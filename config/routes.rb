@@ -13,6 +13,9 @@ Takemyphone::Application.routes.draw do
   match '/payments', to: 'index_pages#payments'
   match '/cancellations', to: 'index_pages#cancellations'
 
+  match '/nokia', to: 'phones#nokia'
+  match '/samsung', to: 'phones#samsung'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
