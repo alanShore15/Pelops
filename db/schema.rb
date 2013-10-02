@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20131002000334) do
+=======
+ActiveRecord::Schema.define(:version => 20131001102959) do
+>>>>>>> f5f035bae50b034bc983a0cdfc4bf3b3b368f923
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -46,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20131002000334) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+<<<<<<< HEAD
   create_table "phones", :force => true do |t|
     t.string   "brand"
     t.string   "name"
@@ -58,4 +63,6 @@ ActiveRecord::Schema.define(:version => 20131002000334) do
     t.datetime "updated_at",    :null => false
   end
 
+=======
+>>>>>>> f5f035bae50b034bc983a0cdfc4bf3b3b368f923
 end
