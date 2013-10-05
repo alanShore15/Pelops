@@ -16,6 +16,9 @@ Takemyphone::Application.routes.draw do
   match '/nokia', to: 'phones#nokia'
   match '/samsung', to: 'phones#samsung'
 
+  match '/:phone_url' => 'phones#sell_now'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

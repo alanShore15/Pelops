@@ -24,7 +24,10 @@
     <%= image_tag 'galaxy-star.jpeg' %>
     <div class="caption text-center">
     <h4><%= "Nokia "+ phone.name %></h4>
-    <p align="center"><a href="#" class="btn btn-inverse btn-block" style="text-decoration: none; color: white">Sell Now</a></p>
+    <!-- <p align="center"><a href="#" class="btn btn-inverse btn-block" style="text-decoration: none; color: white">Sell Now</a></p>  -->
+      <p align="center">
+        <%= link_to "Sell Now", phone.phone_url, :controller => "sell_now" %>
+      </p>
     </div>
     </div>
     </li>

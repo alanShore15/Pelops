@@ -1,0 +1,232 @@
+<% provide(:title, 'Sell '+@phone[0].brand+" "+@phone[0].name+" now") %>
+
+<!-- billing form -->
+<script> 
+$(document).ready(function(){
+  $("#billing").click(function(){
+    $("#billingpanel").slideDown("slow");
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("input[name$='field_radio']").click(function() {
+        var test = $(this).val();
+
+        $("div.tab-pane").hide();
+        $("#Condition" + test).show();
+    });
+});
+</script>
+
+ <div class="container-fluid">
+
+  <div class="row-fluid">
+  <div class="span12" style="background-color:#ffad00">
+    
+    <h5> CHOOSE YOUR PHONE <i class="icon-play icon-black"></i>  <%= @phone[0].brand %> <i class="icon-play icon-black"></i> <%= @phone[0].name %></h5>
+  </div>
+  </div></br></br>
+
+  <div class="container-fluid span2" style="margin-left:0px ">
+    <%= image_tag @phone[0].phone_url+".jpeg" %>
+  </br></br>
+  </div>
+
+  <div class="container-fluid span2" style="margin-left:0px ">
+    <p style="font-size:22px; font-weight:bold"></br>
+      <%= @phone[0].brand %></br></br><%= @phone[0].name %></br></br><%= @phone[0].memory %>
+    </p></br></br></br>
+
+    <p>
+      <a href="#" style="color:#ffad00; text-decoration:underline">Change model</a>
+    </p></br>
+
+    <p style="font-weight:bold; color:#ffad00">
+      Having Trouble?
+    </p>
+    <p >
+      Visit our <a href="/faq" target="_blank" style="color:black; text-decoration:underline">FAQ section</a>
+    </p>    
+  </div>
+
+  <div class="container-fluid span3" style="margin-left:0px ">
+    <h4>Condition of the phone ?</h4>
+
+   
+  <div class="controls">
+                <label>
+                  <input class="form-field-radio" name="field_radio" type="radio" value="2" />
+                  <span class="lbl"> Broken</span>
+                </label>
+
+                <label>
+                  <input class="form-field-radio" name="field_radio" type="radio" value="3" />
+                  <span class="lbl"> Good</span>
+                </label>
+
+                <label>
+                  <input class="form-field-radio" name="field_radio" type="radio" value="4" />
+                  <span class="lbl"> Flawless</span>
+                </label>
+              
+
+
+<div class="tab-content">
+  <div class="tab-pane" id="Condition2" style="display: none"><p>
+    Your phone is in this condition if <b>any</b> of the following are true :
+    <ul>
+  <li>Broken or cracked LCD screen</li>
+  <li>Does not power on</li>
+  <li>Broken,cracked or missing parts (buttons,charging port,battery cover etc.)</li>
+  <li>Can not be activated for service</li>
+  <li>Critical features can not be used (touch screen, camera etc.)</li>
+</ul>    
+  </p></div>
+  <div class="tab-pane" id="Condition3" style="display: none"><p>
+    Your phone is in this condition if <b>all</b> of the following are true :
+    <ul>
+  <li>is in great working order with some minor cosmetic signs of wear</li>
+  <li>has no cracks or missing buttons (power, home, ringer, and/or volume)</li>
+  </ul>
+  </p></div>
+  <div class="tab-pane" id="Condition4" style="display: none"><p>
+    Your phone is in this condition if <b>all</b> of the following are true :
+    <ul>
+  <li>Works perectly</li>
+  <li>No noticeable flaws, still in its package or looks like new</li>
+  <li>Has zero scratches or scuffs</li></ul>
+  </p></div>
+</div></div></div>
+
+
+
+  <div class="container-fluid span2" style="margin-left:0px ">
+    <h4>You have</h4>
+    <label class="checkbox">
+<input type="checkbox" name="bill" value="bill">Bill<br>
+<input type="checkbox" name="box" value="box">Box<br>
+<input type="checkbox" name="charger" value="charger">Charger<br>
+<input type="checkbox" name="earphones" value="earphones">Earphones<br>
+<input type="checkbox" name="earphones" value="earphones">USB Cable<br>
+</label>
+  </div>
+
+  <div class="container-fluid span3" style="margin-left:0px ">
+    <h4>More about your phone (optional)</h4>
+    <textarea class="input-xlarge span3" rows="9"></textarea></br></br>
+    
+    <p align="right"><a id="billing" class="btn btn-warning smoothscroll" style="color:white; text-decoration:none">Take My Phone</a></p>
+
+  </div></div></br>
+
+
+
+
+<div class="container-fluid" style="display:none" id="billingpanel">
+  <div class="row-fluid">
+  <div class="span12 text-center" style="background-color:#ffad00">
+      <h4>Enter Your Billing Details</h4>
+  </div>
+  </div></br>
+          <div class="row-fluid">
+              <div class="span12" style="padding:10px">
+
+                <!-- login -->
+                  <div class="span6">
+                      <div class="area">
+                         <h4 style="color:#ffad00">  We are currently operating only in Kharagpur (West Bengal), India.</br></br></br></br></h4>
+                            <form class="form-horizontal">
+                                <div class="heading">
+                                    <h4 class="form-heading text-center"><u>Personal Details</u></h4>
+                                    <br/>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUsername">Full Name</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUsername" placeholder="E.g. John Doe">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputPassword">Email id</label>
+                                    <div class="controls">
+                                        <input type="password" id="inputPassword" placeholder="E.g. abc@xyz.com">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputPassword">Phone Number</label>
+                                    <div class="controls">
+                                        <input type="password" id="inputPassword" placeholder="10 digits only">
+                                    </div>
+                                </div>
+                            </form> 
+            </div>                           
+                    </div>
+                    
+                    <!-- Signup -->
+
+                    <div class="span6">
+                      <div class="area">
+                            <form class="form-horizontal">
+                                <div class="heading">
+                                    <h4 class="form-heading text-center"><u>Address</u></h4>
+                                    <br/>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputFirst">Address Line 1</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputFirst" placeholder="Address Line 1">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">Address Line 2</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputEmail" placeholder="Address Line 2">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUser">City/Town</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUser" placeholder="Kharagpur" disabled>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUser">Zip/Postal Code</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUser" placeholder="721302" disabled>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUser">State</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUser" placeholder="West Bengal" disabled>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUser">Country</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUser" placeholder="India" disabled>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="checkbox">
+                                            <input type="checkbox"> I agree all your <a href="#">Terms of Services</a></br></br>
+                                        </label>
+                                        <p align="center"><button type="submit" class="btn btn-warning">Sell Now</button></p>                                     
+                                                                          
+                                    </div>
+                                </div>
+                            </form> 
+
+            </div> 
+
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+
+
